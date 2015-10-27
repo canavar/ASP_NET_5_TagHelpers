@@ -1,0 +1,12 @@
+﻿@model ASP_NET_5_TagHelpers.Models.ToDoListItem
+
+@{
+    ViewBag.Title = "To Do List Without Tag Helpers";
+}
+
+<br /><br /><br /><br />
+    Açıklama : @Html.TextBoxFor(m => m.Text)
+    <br />
+    Tamamlandı mı ? : @Html.CheckBoxFor(m => m.IsCompleted, new { id = "todolistitem" + Model.ItemId })
+    <br /><br />
+    @Html.ActionLink("Tag Helper Kullanılmış Sayfaya Git", "WithTagHelper", "Home")

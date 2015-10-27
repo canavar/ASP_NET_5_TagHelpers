@@ -1,0 +1,15 @@
+﻿@model ASP_NET_5_TagHelpers.Models.ToDoListItem
+@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
+
+@{
+    ViewBag.Title = "To Do List With Tag Helpers";
+}
+
+<br /><br /><br /><br />
+    
+    Açıklama : <input type="text" asp-for="Text" /><br>
+    Tamamlandı mı ? : <input type="checkbox" asp-for="IsCompleted" id="@String.Format("todolistitem{0}", Model.ItemId)" /><br />
+
+    <br />
+
+    <a asp-controller="Home" asp-action="WithoutTagHelper"> Tag Helper Kullanılmamış Sayfaya Git</a>
