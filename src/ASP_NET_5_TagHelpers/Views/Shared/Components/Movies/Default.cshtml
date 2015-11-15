@@ -1,0 +1,8 @@
+﻿@model IEnumerable<ASP_NET_5_TagHelpers.Models.Movie>
+<div>Movies : </div>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="http://www.imdb.com/title/@item.ImdbId">@item.Name</a></li>
+    }
+</ul>
